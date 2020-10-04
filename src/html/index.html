@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+    <link rel="stylesheet" href="../style/html5reset-1.6.1.css">
+    <style>
+        * {
+            margin: 2px;
+            background-color: rgb(235, 235, 235);
+        }
+        body {
+            padding: 5% 16%;
+            height: 100%;
+            background-color: rgb(235, 235, 235);
+        }
+        table {
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+        }
+        tr {
+            border-radius: 12px;
+        }
+        td {
+            border-radius: 12px;
+            padding: 12px 14px;
+        }
+        input {
+            border-style: none;
+            border-radius: 12px;
+            padding: 6px 12px;
+            box-shadow:
+                inset 8px 8px 16px rgba(0, 0, 0, 0.25),
+                inset -8px -8px 16px rgb(255, 255, 255),
+                -8px -8px 16px rgba(0, 0, 0, 0.10),
+                8px 8px 16px rgb(255, 255, 255);
+        }
+        input[type="checkbox"] {
+            transform: scale(2);
+            box-shadow:
+                inset 4px 4px 8px rgba(0, 0, 0, 0.25),
+                inset -4px -4px 8px rgb(255, 255, 255),
+                -8px -8px 16px rgba(0, 0, 0, 0.10),
+                8px 8px 16px rgb(255, 255, 255);
+        }
+        input[type="checkbox"]:checked {
+            transform: scale(2);
+            box-shadow:
+                0px 0px 8px rgb(197, 224, 255),
+                -8px -8px 16px rgba(0, 0, 0, 0.10),
+                8px 8px 16px rgb(255, 255, 255);
+        }
+        button {
+            border-style: none;
+            border-radius: 12px;
+            padding: 6px 12px;
+            box-shadow:
+                8px 8px 16px rgba(0, 0, 0, 0.25),
+                -8px -8px 16px rgb(255, 255, 255),
+                inset -8px -8px 16px rgba(0, 0, 0, 0.10),
+                inset 8px 8px 16px rgb(255, 255, 255);
+        }
+        button:active {
+            border-style: none;
+            border-radius: 12px;
+            padding: 6px 12px;
+            box-shadow:
+                inset 8px 8px 16px rgba(0, 0, 0, 0.25),
+                inset -8px -8px 16px rgb(255, 255, 255),
+                -8px -8px 16px rgba(0, 0, 0, 0.10),
+                8px 8px 16px rgb(255, 255, 255);
+        }
+        .card{
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow:
+                8px 8px 32px rgba(0, 0, 0, 0.10),
+                -8px -8px 32px rgb(255, 255, 255),
+                inset 8px 8px 32px rgba(0, 0, 0, 0.25),
+                inset -8px -8px 32px rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+
+    <menu>
+        <ul>
+            <ui><button onclick="toggleTaskForm()">ADD</button></ui>
+            <ui><button onclick="delCheckedTask()">DEL</button></ui>
+            <ui><button onclick="saveTasks()">SAVE</button></ui>
+        </ul>
+    </menu>
+
+    <main>
+        <table id="task_table">
+            <tr id="form" hidden>
+                <td colspan="2" style="min-width: 200px;"><input type="text" id="form_task" style="width: 95%;"></td>
+                <td><button onclick="addTask()">OK</button></td>
+            </tr>
+        </table>
+    </main>
+
+    </div>
+    <script src="../script/index.js"></script>
+</body>
+</html>
